@@ -13,7 +13,7 @@ public class NBody {
 		double dt = Double.parseDouble(args[1]);
 		String filename = args[2];
 
-		Planet[] bodies = readBodies(filename);
+		Planet[] bodies = readPlanets(filename);
 		double radUniverse = readRadius(filename);
 
 		StdDraw.setScale(-radUniverse, radUniverse);
@@ -65,7 +65,7 @@ public class NBody {
         return in.readDouble();
 	}
 
-	public static Planet[] readBodies(String file_name) {
+	public static Planet[] readPlanets(String file_name) {
 
 		Planet[] bodies = new Planet[5];
 
@@ -98,7 +98,6 @@ public class NBody {
  			            ^
    NBody.java:25: error: ';' expected
  			Body bodies[j] = new Body(xxPos,yyPos,xxVel,yyVel,mass,image);
-
  * for instead, i should do 
             Body[] bodies = new Body[5];
  * and then assign parameters to each element in bodies (just like the correct code above) */
