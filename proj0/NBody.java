@@ -13,7 +13,7 @@ public class NBody {
 		double dt = Double.parseDouble(args[1]);
 		String filename = args[2];
 
-		Body[] bodies = readBodies(filename);
+		Planet[] bodies = readBodies(filename);
 		double radUniverse = readRadius(filename);
 
 		StdDraw.setScale(-radUniverse, radUniverse);
@@ -65,9 +65,9 @@ public class NBody {
         return in.readDouble();
 	}
 
-	public static Body[] readBodies(String file_name) {
+	public static Planet[] readBodies(String file_name) {
 
-		Body[] bodies = new Body[5];
+		Planet[] bodies = new Planet[5];
 
 		In in = new In(file_name);
 		int numBody = in.readInt();
@@ -82,7 +82,7 @@ public class NBody {
 			double mass = in.readDouble();
 			String imgFileName = in.readString();
 
-			bodies[j] = new Body(xxPos,yyPos,xxVel,yyVel,mass,imgFileName);
+			bodies[j] = new Planet(xxPos,yyPos,xxVel,yyVel,mass,imgFileName);
 		}
 
 		return bodies;
@@ -91,7 +91,7 @@ public class NBody {
 
 /* 2022/12/19
  * Only method can be categarized as static or non-static. not class!!! 
- * Still don't remember how to initial a new body OBJECT
+ * Still don't remember how to initial a new Planet OBJECT
  * Got this error while working on it:
    NBody.java:25: error: ']' expected
  			Body bodies[j] = new Body(xxPos,yyPos,xxVel,yyVel,mass,image);
