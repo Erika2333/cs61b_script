@@ -5,9 +5,9 @@ public class Planet {
 	public double yyVel;
 	public double mass;
 	public String imgFileName;
-	static final double G = 6.67e-11;
-	public int xxSign = 1;
-	public int yySign = 1;
+	private static final double G = 6.67e-11;
+	private int xxSign = 1;
+	private int yySign = 1;
 
     //constructor to initialize integer and string	
 	public Planet(double xP, double yP, double xV, double yV, double m, String img) {
@@ -91,3 +91,20 @@ just need to think about what's the static and non-static method.
 cannot come up with the answer right away. */
 
 /* 2022/12/23 don't know how to push files into remote repo ... */
+
+/*** 2022/12/23 use website to upload to repo for now, there is internet issue
+ auto grader message 1: API Checker
+ Testing Planet.java
+ The following fields should be made private:
+  *  public int xxSign
+  *  public int yySign
+  *  static final double G
+
+Testing NBody.java
+
+One or more API checks failed.
+
+don't know what is API checker
+*/
+
+
