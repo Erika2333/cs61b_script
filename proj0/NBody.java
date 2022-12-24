@@ -61,21 +61,21 @@ public class NBody {
 
 	public static double readRadius(String file_name) {
 		In in = new In(file_name);
-        double numBody = in.readInt();
-        return in.readDouble();
+    double numBody = in.readInt();
+    return in.readDouble();
 	}
 
 	public static Planet[] readPlanets(String file_name) {
 
-		Planet[] bodies = new Planet[5];
-
 		In in = new In(file_name);
 		int numBody = in.readInt();
-		double radUniverse = in.readDouble();        
 
-		for (int j = 0; j<5; j++) {
+	  Planet[] bodies = new Planet[numBody];
+		double radUniverse = in.readDouble();
 
-            double xxPos = in.readDouble();
+		for (int j = 0; j<numBody; j++) {
+
+      double xxPos = in.readDouble();
 			double yyPos = in.readDouble();
 			double xxVel = in.readDouble();
 			double yyVel = in.readDouble();
